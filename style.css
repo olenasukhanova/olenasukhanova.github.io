@@ -49,10 +49,12 @@ body {
 .logo {
   margin-top:7px;
 }
-
+.menu {
+  position:relative;
+}
 .menu li {
   float: left;
-  width:143px;  /*instead of 25%*/
+  width: 25%; /*instead of 25%*/
   border-left:1px solid #2c71b8;
   position:relative;
 }
@@ -61,7 +63,7 @@ body {
   border-right:1px solid #2c71b8;
 }
 
-.menu a{
+.menu a, .dropmenu a{
   display: block;
   height:50px;
   text-decoration: none;
@@ -106,21 +108,16 @@ li:hover .dropmenu {
   position:relative;
   list-style-type: none;
   border:none;
-  /* width:143px; */
+  /* width:146px; */
+  float: left;
+  width:202%;
   margin-left: -1px;
 }
 
 .dropmenu a{
-  display: block;
-  height:50px;
-  width:287px;
-  text-decoration: none;
-  text-align:center;
-  line-height: 50px;
+  /* width:293px; */
   color:white;
   background-color: #2c71b8;
-  font-weight:300;
-  font-size:21px;
 }
 
 .dropmenu a:hover{
@@ -132,7 +129,7 @@ li:hover .dropmenu {
 .searchbox  {
   margin-top:5px;
   margin-bottom:5px;
-  margin-left:30px;
+  margin-left:35px;
   border: 1px solid #2c71b8;
   width:200px;
   height: 40px;
@@ -179,7 +176,7 @@ left:-1%;
 /* Cart button */
 .cart  {
   margin-top:5px;
-  margin-left:30px;
+  margin-left:33px;
   border:none;
   position: relative;
   z-index: 10;
@@ -212,7 +209,6 @@ left:-1%;
    z-index: 20;
 }
 
-
 /* Slider */
 .line {
    width:100%;
@@ -235,18 +231,18 @@ left:-1%;
   /* Main menu */
 
   /* Left part */
-  .deviceoptions,.clearpart {
-    width:270px;
+  .checkboxsection {
+    width:86.8%;
+  }
+  .deviceoptions {
+    /* width:270px; */
     height:844px;
     background-color:rgba(255,255,255,0.3);
     border-right:2px solid white;
   }
-  .clearpart {
-    background-color:none;
-  }
-
 
   /* Right part = Second menu */
+
   .secondmenu li {
     float:left;
     margin-top: 30px;
@@ -264,7 +260,6 @@ left:-1%;
     text-decoration: underline;
     color:rgba(255,255,255,0.6);
   }
-
 
   i.right {
     border: solid rgba(255,255,255,0.6);
@@ -288,21 +283,41 @@ left:-1%;
     font-weight:700;
     font-size:48px;
     margin-top: 30px;
-    /* margin-left:-5px; */
   }
+
+  /* Sort part */
+  .sort {
+     margin-top: 64px;
+     float: right;
+     height:40px;
+     width:270px;
+     background-color: #2c71b8;
+     border: 1px solid white;
+     margin-right:-11px;
+   }
 
  /* FIRST PART OF Products */
 
- .head1,.head2,.head3, .head4,.head5,.head6,.head7,.head8,.head9{
+ .item1,.item2,.item3, .item4,.item5,.item6,.item7,.item8,.item9{
    width:270px;
    height:180px;
    background-color:rgba(255,255,255,0.75);
    border:1px solid white;
-   margin-top: 30px;
+   margin-top: 50px;
    position: relative;
  }
+ .item4,.item5,.item6,.item7,.item8,.item9 {
+  margin-top: 30px;
+ }
 
- .tail1, .tail2, .tail3, .tail4, .tail5, .tail6,.tail7,.tail8,.tail9{
+ .item2,.catalog2,.item5,.catalog5,.item8,.catalog8{
+   margin-left: 20px;
+ }
+ .item3,.catalog3,.item6,.catalog6,.item9,.catalog9 {
+   margin-left: 35px;
+ }
+
+ .catalog1, .catalog2, .catalog3, .catalog4, .catalog5, .catalog6,.catalog7,.catalog8,.catalog9{
    width:270px;
    height:472px;
    background-color:none;
