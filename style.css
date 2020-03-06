@@ -231,14 +231,55 @@ left:-1%;
   /* Main menu */
 
   /* Left part */
-  .checkboxsection {
+  .checkboxfilter {
     width:86.8%;
   }
-  .deviceoptions {
+  .checkboxsection {
     /* width:270px; */
-    height:844px;
+    height:846px;
     background-color:rgba(255,255,255,0.3);
     border-right:2px solid white;
+    color:white;
+    font-weight: 300;
+    font-size: 21px;
+  }
+
+  .checkbox {
+   padding-left: 29px;
+}
+
+ .filter {
+   padding-top: 30px;
+   padding-bottom:26px;
+   font-weight: 700;
+ }
+
+  input[type="checkbox"] {
+    display:none;
+  }
+
+  label:before {
+    content: "";
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border:1px solid white;
+    cursor:pointer;
+    vertical-align: middle;
+  }
+
+  input[type="checkbox"]:checked+label:before {
+    background-color: white;
+  }
+
+ .fieldset {
+   padding-left:10px;
+}
+
+  .submitbutton  {
+    margin-top: 20px;
+    margin-left:20px;
+    margin-right:20px;
   }
 
   /* Right part = Second menu */
@@ -407,7 +448,7 @@ p.price span {
   margin-right:30px;
 }
 
-.button1,.button2 {
+.button1,.button2,.submit {
   border: 1px solid white;
   width:208px;
   height: 50px;
@@ -424,6 +465,6 @@ p.price span {
     background-position: 95% 50%;
 }
 
-.button1:hover,.button2:hover {
+.button1:hover,.button2:hover,.submit:hover  {
   background-color:rgba(255,255,255,0.3);
 }
