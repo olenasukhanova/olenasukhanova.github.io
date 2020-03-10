@@ -87,7 +87,7 @@ body {
 
 li:hover .active{
   color:white;
-  background:url("demoshop/arrowwhite.png") no-repeat;
+  background:url("demoShop/arrowwhite.png") no-repeat;
   background-position: 90% 60%;
   background-color:#2c71b8;
 }
