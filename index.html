@@ -5,6 +5,8 @@
 	<title>Layout</title>
 	  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
 		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 		<link rel="stylesheet" href="style.css">
 	</head>
 <body>
@@ -57,26 +59,35 @@
 	</div>
 	</div>
 	</header>
-	<div class="slider">
-	<div class="row">
-	<div class="line"> </div>
-	<div class="overlay"> </div>
-</div>
-</div>
+
 	<main class="main">
-	<div class="container">
-		<div class="row">
-		<div class="col-md-3">
-			<div class="row">
-			<div class="checkboxfilter">
+		<div class="slider">
+		 <div class="container">
+			 	<div class="row">
+			<div class="slider-block">
+			 <div> <img src="slider/5.jpg" alt="" class="slider_photo"> </div>
+				 <div> <img src="slider/1.png" alt="" class="slider_photo"> </div>
+					 <div> <img src="slider/3.jpg" alt="" class="slider_photo"> </div>
+					    <div> <img src="slider/4.jpg" alt="" class="slider_photo"> </div>
+		      </div>
+	       </div>
+		   </div>
+		</div>
+<div class="overlay"> </div>
+ <div class="line"> </div>
+	 <div class="container">
+	  <div class="row">
+	 	 <div class="col-md-3">
+			 <div class="row">
+			 <div class="checkboxfilter">
 				<div class="checkboxsection">
-			<ul class="checkbox">
-				<li class="filter">DEVICE TYPE</li>
-				<li><input type="checkbox" id="laptop">
-				    <label for="laptop"><span class="fieldset">Laptop</span></label></li><br>
-				<li><input type="checkbox" id="tablet">
-					  <label for="tablet"><span class="fieldset">Tablet</span></label></li><br>
-			</ul>
+		    	<ul class="checkbox">
+				   <li class="filter">DEVICE TYPE</li>
+				   <li><input type="checkbox" id="laptop">
+				       <label for="laptop"><span class="fieldset">Laptop</span></label></li><br>
+			     <li><input type="checkbox" id="tablet">
+					     <label for="tablet"><span class="fieldset">Tablet</span></label></li><br>
+			    </ul>
       <ul class="checkbox">
 			  <li class="filter">COLOR</li>
 			  <li><input type="checkbox" id="black">
@@ -132,7 +143,7 @@
 			<div class="item1"> <img src="demoShop/icon(17).png" alt="Screen" class="devicephoto">
 				<div class="icons">
 					   <div class="icon1"> </div>
-						 <div class="icon2 heart-button"> </div>
+						 <div class="icon2"> </div>
 				</div>
 		</div>
 			<div class="catalog1">
@@ -153,7 +164,7 @@
 			<div class="item2"> <img src="demoShop/icon (11).png" alt="TV device" class="devicephoto">
 				<div class="icons">
 					<div class="icon1"> </div>
-					<div class="icon2 heart-button"> </div>
+					<div class="icon2"> </div>
 				</div>
 			</div>
 		  <div class="catalog2">
@@ -174,7 +185,7 @@
 			<div class="item3"> <img src="demoShop/icon (13).png" alt="Smart watch" class="devicephoto">
 				<div class="icons">
 					<div class="icon1"> </div>
-					<div class="icon2 heart-button"> </div>
+					<div class="icon2"> </div>
 				</div>
 			</div>
 			<div class="catalog3">
@@ -197,7 +208,7 @@
 			<div class="item4"> <img src="demoShop/icon (16).png" alt="Laptop" class="devicephoto">
 		  <div class="icons">
 				<div class="icon1"> </div>
-				<div class="icon2 heart-button"> </div>
+				<div class="icon2"> </div>
 		</div>
 		</div>
 		<div class="catalog4">
@@ -218,7 +229,7 @@
 			<div class="item5"> <img src="demoShop/icon (14).png" alt="Audio player" class="devicephoto">
 					<div class="icons">
 					<div class="icon1"> </div>
-					<div class="icon2 heart-button"> </div>
+					<div class="icon2"> </div>
 	 </div>
  </div>
 <div class="catalog5">
@@ -317,12 +328,22 @@
 		 </div>
 		</div>
 		<div class="row"> </div>
+		<div class="load_more_button"> load more... </div>
  </div>
 </div>
 </div>
 </div>
 </main>
-	<footer class="footer"></footer>
+	<footer class="footer">
+		<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+       <p id="copyright">&copy Copyright 2017</p>
+			</div>
+	</footer>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
 	<script src="app.js"></script>
 </body>
 </html>

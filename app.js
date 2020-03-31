@@ -23,14 +23,33 @@ console.log (addToCartButtons);
  }
 
 
- const heartButtonElements = document.querySelectorAll(".heart-button");
+ // const heartButtonElements = document.querySelectorAll(".heart-button");
+ //
+ // for(let i = 0;i < heartButtonElements.length; i++) {
+ //   heartButtonElements[i].addEventListener("click", function() {
+ //       if (heartButtonElements[i].classList.contains("icon2_hover")) {
+ //         heartButtonElements[i].classList.remove("icon2_hover");
+ //       } else {
+ //         heartButtonElements[i].classList.add("icon2_hover");
+ //       }
+ //   })
+ // }
 
- for(let i = 0;i < heartButtonElements.length; i++) {
-   heartButtonElements[i].addEventListener("click", function() {
-       if (heartButtonElements[i].classList.contains("icon2_hover")) {
-         heartButtonElements[i].classList.remove("icon2_hover");
-       } else {
-         heartButtonElements[i].classList.add("icon2_hover");
-       }
-   })
- }
+// changed like buttons
+ const likedButtons = document.querySelectorAll(".icon2");
+ console.log(likedButtons);
+
+ for(let i = 0;i < likedButtons.length; i++) {
+  likedButtons[i].addEventListener("click", function(){
+    likedButtons[i].classList.toggle('liked');
+  })
+};
+
+// Slider
+
+$(".slider-block").slick(  {
+   dots:true,
+   autoplay:true,
+   autoplaySpeed:2000,
+   arrows:true,
+});
