@@ -52,4 +52,44 @@ $(".slider-block").slick(  {
    autoplay:true,
    autoplaySpeed:2000,
    arrows:true,
+   // adaptiveHeight: true,
+   pauseOnDotsHover:true,
+   zindex:10,
 });
+
+
+// change quantity
+
+let incrementBtn = document.querySelector('.increment-btn');
+let decrementBtn = document.querySelector('.decrement-btn');
+let quantityInput = document.querySelector('.product-quantity input');
+
+
+let currenctValue = +quantityInput.value;
+if(currenctValue <= 1) {
+    decrementBtn.disabled = true;
+} else {
+    decrementBtn.disabled = false;
+}
+
+incrementBtn.addEventListener("click",function() {
+    let currenctValue = +quantityInput.value;
+    let nextValue = currenctValue + 1;
+    quantityInput.value = nextValue;
+    if(nextValue <= 1) {
+        decrementBtn.disabled = true;
+    } else {
+        decrementBtn.disabled = false;
+    }
+})
+
+decrementBtn.addEventListener("click",function() {
+    let currenctValue = +quantityInput.value;
+    let nextValue = currenctValue - 1;
+    quantityInput.value = nextValue;
+    if(nextValue <= 1) {
+        decrementBtn.disabled = true;
+    } else {
+        decrementBtn.disabled = false;
+    }
+})
