@@ -5,9 +5,11 @@
 	<title>Layout</title>
 	  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
 		<link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="selectric.css">
 		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 		<link rel="stylesheet" href="style.css">
+	</head>
 	</head>
 <body>
 	<header class="header">
@@ -46,7 +48,7 @@
 		<div class="col-md-9">
 		  <div class="searchbox">
 				<input type="text" placeholder="search" name="q">
-				<a href="" id="button">	<button class="button"> </button> </a>
+				<a href="" id="button">	<button class="search_button"> </button> </a>
 		</div>
 	</div>
 		<div class="col-md-3">
@@ -63,7 +65,7 @@
 	<main class="main">
 		<div class="slider">
 		 <div class="container">
-			 	<div class="row">
+			 	<!-- <div class="row"> -->
 			<div class="slider-block">
 			 <div> <img src="slider/5.jpg" alt="" class="slider_photo"> </div>
 				 <div> <img src="slider/1.png" alt="" class="slider_photo"> </div>
@@ -71,7 +73,7 @@
 					    <div> <img src="slider/4.jpg" alt="" class="slider_photo"> </div>
 		      </div>
 	       </div>
-		   </div>
+		   <!-- </div> -->
 		</div>
 <div class="overlay"> </div>
  <div class="line"> </div>
@@ -136,7 +138,14 @@
 		</div>
 		<div class="row">
 		<div class="col-md-4">
-			<div class="sort"> </div>
+			<div class="sort">
+				<select id="select-sort">
+					<option>sort by price</option>
+					<option>sort by name</option>
+					<option>sort by date</option>
+					<option>sort by popularity</option>
+				</select>
+		</div>
 		</div>
     <div class="row"> </div>
 		<div class="col-md-4">
@@ -156,7 +165,7 @@
 			 <div class="informbutton">
 				 <div class="product-quantity">
             <button class="decrement-btn">-</button>
-            <input type="textContent" value="1" class="count-number">
+            <input type="textContent" value="1">
             <button class="increment-btn">+</button>
          </div>
 			 <button class="button1">MORE DETAILS</button>
@@ -180,9 +189,9 @@
 				<p>RAM: 1 GB</p><br>
 				<p class="price"> $1250 <span>99</span></p>
 				<div class="informbutton">
-					<div class="product-quantity">
+					 <div class="product-quantity">
              <button class="decrement-btn">-</button>
-             <input type="textContent" value="1" class="count-number">
+             <input type="textContent" value="1">
              <button class="increment-btn">+</button>
           </div>
 				<button class="button1">MORE DETAILS</button>
@@ -386,9 +395,11 @@
        <p id="copyright">&copy Copyright 2017</p>
 			</div>
 	</footer>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
+	<script type="text/javascript" src="jquery.selectric.min.js"></script>
 	<script src="app.js"></script>
 </body>
 </html>

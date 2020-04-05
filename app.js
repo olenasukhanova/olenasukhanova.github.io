@@ -60,36 +60,47 @@ $(".slider-block").slick(  {
 
 // change quantity
 
-let incrementBtn = document.querySelector('.increment-btn');
-let decrementBtn = document.querySelector('.decrement-btn');
-let quantityInput = document.querySelector('.product-quantity input');
+let incrementBtns = document.querySelectorAll('.increment-btn');
+let decrementBtns = document.querySelectorAll('.decrement-btn');
+let quantityInputs = document.querySelectorAll('.product-quantity input');
 
+function changeButtonStatus (number, ind) {
+  if (number <= 1) {
+      decrementBtns[ind].disabled = true;
+  } else {
+      decrementBtns[ind].disabled = false;
+  }
 
-let currenctValue = +quantityInput.value;
-if(currenctValue <= 1) {
-    decrementBtn.disabled = true;
-} else {
-    decrementBtn.disabled = false;
+ if (number >=5) {
+      incrementBtns[ind].disabled = true;
+ } else {
+      incrementBtns[ind].disabled = false;
+ }
 }
 
-incrementBtn.addEventListener("click",function() {
-    let currenctValue = +quantityInput.value;
-    let nextValue = currenctValue + 1;
-    quantityInput.value = nextValue;
-    if(nextValue <= 1) {
-        decrementBtn.disabled = true;
-    } else {
-        decrementBtn.disabled = false;
-    }
+for(let i = 0; i < incrementBtns.length; i++) {
+  let currentValue = +quantityInputs[i].value;
+  changeButtonStatus(currentValue, i);
+
+
+incrementBtns[i].addEventListener("click",function() {
+    let currentValue = +quantityInputs[i].value;
+    let nextValue = currentValue + 1;
+    quantityInputs[i].value = nextValue;
+    changeButtonStatus(nextValue,i)
 })
 
-decrementBtn.addEventListener("click",function() {
-    let currenctValue = +quantityInput.value;
-    let nextValue = currenctValue - 1;
-    quantityInput.value = nextValue;
-    if(nextValue <= 1) {
-        decrementBtn.disabled = true;
-    } else {
-        decrementBtn.disabled = false;
-    }
+
+decrementBtns[i].addEventListener("click",function() {
+    let currentValue = +quantityInputs[i].value;
+    let nextValue = currentValue - 1;
+    quantityInputs[i].value = nextValue;
+    changeButtonStatus(nextValue,i)
 })
+}
+
+// sort SECTION
+
+$(function() {
+  $('select').selectric();
+});

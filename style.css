@@ -174,7 +174,7 @@ top:10%;
 left:-1%;
 }
 
-.button {
+.search_button {
   /* padding:7px; */
   width: 30px;
   height: 30px;
@@ -419,6 +419,55 @@ img.slider_photo {
      background-color: #2c71b8;
      border: 1px solid white;
      margin-right:-11px;
+   }
+
+
+   .selectric {
+    border:none;
+    background: none;
+}
+
+   .selectric .label, .selectric-items li{
+     border: none;
+     outline: none;
+     -webkit-appearance: none;
+     color:white;
+     font-size: 21px;
+     font-weight: 300;
+     font-family:'Roboto';
+     padding-left:20px;
+   }
+
+   .selectric .button:after {
+     content:"";
+     /* border-top-color:white; */
+     background:url("demoShop/arrowwhite.png") no-repeat;
+     background-position: 90% 60%;
+     height: 15px;
+     width:25px;
+     border: 0px solid transparent;
+   }
+
+  /* .selectric-hover
+   .selectric .button:after {
+     border-top-color:#BBB;
+   } */
+
+
+   .selectric-items {
+     border:1px solid white;
+     width:269.5px;
+   }
+
+   .selectric-items li, .selectric-items li.highlighted {
+     background:#2c71b8;
+     color:white;
+
+   }
+
+   .selectric-items li:hover, .selectric-items li.highlighted:hover {
+     background: white;
+     color: #2c71b8;
    }
 
  /* FIRST PART OF Products */
