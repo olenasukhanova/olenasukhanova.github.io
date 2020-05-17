@@ -19,7 +19,7 @@ body {
   padding:25px 0;
 }
 
-.row::after{
+.row::after, .menu::after{
   display: block;
   content:"";
   clear:both;
@@ -58,7 +58,7 @@ body {
 }
 .menu li {
   float: left;
-  width: 25%; /*instead of 25%*/
+  width: 25%;
   border-left:1px solid #2c71b8;
   position:relative;
 }
@@ -83,7 +83,7 @@ body {
 }
 /* Arrow down */
 
-.active {
+/* .active {
   background:url("demoShop/arrowdown.png") no-repeat;
   background-position: 90% 60%;
   display: block;
@@ -94,6 +94,35 @@ li:hover .active{
   background:url("demoShop/arrowwhite.png") no-repeat;
   background-position: 90% 60%;
   background-color:#2c71b8;
+} */
+
+li:hover .active{
+  color:white;
+  background-color:#2c71b8;
+}
+
+ul .active {
+ position:relative;
+}
+
+ul .active::after {
+ content: "";
+ display: block;
+ width: 8px;
+ height: 8px;
+ border-right: 2px solid #2c71b8;
+ border-top: 2px solid #2c71b8;
+ position: absolute;
+ right: 15px;
+ top: 23px;
+ transition: 0.3s linear;
+ transform: rotateZ(-45deg);
+}
+
+li:hover a::after {
+   border-color: #fff;
+   top:20px;
+   transform: rotateZ(135deg);
 }
 
 /* Sub menu */
@@ -113,20 +142,20 @@ li:hover .dropmenu {
   position:relative;
   list-style-type: none;
   border:none;
-  /* width:146px; */
   float: left;
   width:202%;
-  margin-left: -1px;
+  left:-1px;
+  /* margin-left: -1px; */
   z-index: 11;
 }
 
 
 .dropmenu a{
-  width:293px;
   color:white;
   background-color: #2c71b8;
-  position: relative;
-  z-index: 11;
+  width:293px;
+  text-align: left;
+  padding-left: 30px;
 }
 
 
@@ -139,8 +168,7 @@ li:hover .dropmenu {
 /* Search box */
 .searchbox  {
   margin-top:5px;
-  margin-bottom:5px;
-  margin-left:35px;
+  margin-left:30px;
   border: 1px solid #2c71b8;
   width:200px;
   height: 40px;
@@ -152,26 +180,26 @@ input[type="text"] {
   outline: none;
   -webkit-appearance: none;
   text-align: left;
-  height:38px;
+  height:40px;
   line-height:40px;
   width:165px;
   text-decoration: none;
   font-weight:300;
   font-size:21px;
   background:none;
+  padding-left:20px;
 }
 
 input[type="text"]::-webkit-input-placeholder {
   color:#2c71b8;
-  padding-left:20px;
-  padding-top:1px;
-  padding-bottom:1px;
 }
+
 
 #button {
 position: relative;
 top:10%;
-left:-1%;
+right:2%;
+float:right;
 }
 
 .search_button {
@@ -637,6 +665,7 @@ p.price span {
     background:url("demoShop/icon(2).png");
     background-repeat: no-repeat;
     background-position: 95% 50%;
+    background-color:#2c71b8;
 }
 
 .button1:hover,.button2:hover,.submit:hover  {
