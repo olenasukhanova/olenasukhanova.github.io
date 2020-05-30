@@ -7,3 +7,6 @@
 [submodule "OlenaSukhanova3"]
 	path = OlenaSukhanova3
 	url = https://github.com/olenasukhanova/OlenaSukhanova3.git
+[submodule "OlenaSukahnova1"]
+	path = OlenaSukahnova1
+	url = https://github.com/olenasukhanova/OlenaSukahnova1.git
