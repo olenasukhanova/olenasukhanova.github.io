@@ -507,6 +507,8 @@ img.slider_photo {
    border:1px solid white;
    margin-top: 50px;
    position: relative;
+   line-height: 180px;
+   text-align: center;
  }
  .item4,.item5,.item6,.item7,.item8,.item9 {
   margin-top: 30px;
@@ -559,8 +561,8 @@ input[type="textContent"] {
   text-align: center;
 }
 
-input[type="textContent"]:-ms-value {
-}
+/* input[type="textContent"]:-ms-value {
+} */
 
 .decrement-btn {
   position: absolute;
