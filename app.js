@@ -35,6 +35,7 @@ console.log (addToCartButtons);
  //   })
  // }
 
+ 
 // changed like buttons
  const likedButtons = document.querySelectorAll(".icon2");
  console.log(likedButtons);
